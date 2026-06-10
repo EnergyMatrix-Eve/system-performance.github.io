@@ -88,7 +88,7 @@ header{
 
 /* Stat strip */
 .stats{
-  display:grid; grid-template-columns:repeat(3,1fr);
+  display:grid; grid-template-columns:repeat(4,1fr);
   gap:1px; background:var(--line);
   border:1px solid var(--line); border-radius:var(--radius);
   overflow:hidden; margin-top:36px;
@@ -153,8 +153,9 @@ header{
 .m1 .diamond{ background:var(--charcoal); }
 .m2 .diamond{ background:var(--ember); }
 .m3 .diamond{ background:var(--steel); }
-.m4 .diamond{ background:var(--mist); }   .m4 .diamond span{ color:var(--charcoal); }
+.m4 .diamond{ background:var(--mist); }   .m4 .diamond span{ color:var(--ink); }
 .m5 .diamond{ background:var(--ink); }
+.m6 .diamond{ background:var(--line); }  .m6 .diamond span{ color:var(--charcoal); }
 
 .milestone-title{ flex:1; min-width:0; }
 .milestone-title h3{
@@ -244,11 +245,11 @@ footer{
   <div class="wrap">
     <div class="eyebrow">Performance Review · FY2025–26</div>
     <h1>Eve Liu</h1>
-    <div class="role">Data Analyst &amp; Engineer · Billing, Automation &amp; Data Modelling</div>
+    <div class="role">Data Analyst &amp; Engineer · Automation &amp; Data Modelling</div>
     <p class="summary">
       This year I focused on replacing manual, one-by-one processes with reliable automation —
       across ATCO B2B transactions, retail billing, market data flows and reporting —
-      so the business can bill faster, reconcile with confidence, and see its data clearly.
+      so the business can operate faster, reconcile with confidence, and see its data clearly.
     </p>
 
     <!-- Mosaic weave strip: tile colours sampled from the logo -->
@@ -266,9 +267,10 @@ footer{
     </div>
 
     <div class="stats">
-      <div class="stat"><b>5</b><small>Milestone streams</small></div>
-      <div class="stat"><b>19</b><small>Deliverables shipped</small></div>
-      <div class="stat"><b>3</b><small>Dashboards live</small></div>
+      <div class="stat"><b>6</b><small>Milestone streams</small></div>
+      <div class="stat"><b>11</b><small>Pipeline running</small></div>
+      <div class="stat"><b>10</b><small>Reports live</small></div>
+      <div class="stat"><b>10</b><small>Documentation</small></div>
     </div>
   </div>
 </section>
@@ -286,7 +288,7 @@ footer{
         <div class="diamond"><span>01</span></div>
         <div class="milestone-title">
           <h3>ATCO B2B Transactions</h3>
-          <div class="tagline">End-to-end automation of B2B gas market transactions — from inbound XML to reconciled network bills.</div>
+          <div class="tagline">End-to-end automation of B2B gas market transactions — from inbound XML to reconciled data and reporting.</div>
           <div class="chips"><span class="chip">Automation</span><span class="chip">Integration</span><span class="chip">Reconciliation</span></div>
         </div>
         <svg class="chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -484,14 +486,14 @@ footer{
       </div>
     </article>
 
-    <!-- ================= Milestone 5 ================= -->
+<!-- ================= Milestone 5 ================= -->
     <article class="milestone m5">
       <button class="milestone-header" aria-expanded="false" aria-controls="m5-body">
         <div class="diamond"><span>05</span></div>
         <div class="milestone-title">
-          <h3>APA System Upgrade</h3>
-          <div class="tagline">Preparing EMG for the APA platform transition — structured change management ahead of cut-over.</div>
-          <div class="chips"><span class="chip">Change management</span><span class="chip status">In progress</span></div>
+          <h3>Documentation &amp; Knowledge Management</h3>
+          <div class="tagline">Capturing EMG's critical processes, systems and operating knowledge in standardised instructions, Visio mappings and inventories.</div>
+          <div class="chips"><span class="chip">Documentation</span><span class="chip">Visio</span><span class="chip">Knowledge transfer</span></div>
         </div>
         <svg class="chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
@@ -500,13 +502,54 @@ footer{
           <li class="detail">
             <span class="detail-id">5.1</span>
             <div>
+              <h4>Operational work instructions</h4>
+              <p>Authored step-by-step instructions for business-critical processes, including submission of UPNA & UAI, Agora Retail Invoicing, and update AEMO password.</p>
+              <span class="impact">Market submissions, retail invoicing and AEMO credential management can now be performed consistently by any trained team member — reducing key-person risk.</span>
+            </div>
+          </li>
+          <li class="detail">
+            <span class="detail-id">5.2</span>
+            <div>
+              <h4>Process &amp; architecture mappings</h4>
+              <p>Produced visual documentation of EMG's data flows and system landscape: the EMG Context Diagram, the ATCO and AEMO XML processing chart, retail invoicing process and the APA Gas Data Exchange solution architecture.</p>
+              <span class="impact">A clear, shared picture of how data and files move between EMG entities, ATCO, AEMO, Clients, APA and AGIG — accelerating onboarding, troubleshooting and upgrade planning.</span>
+            </div>
+          </li>
+          <li class="detail">
+            <span class="detail-id">5.3</span>
+            <div>
+              <h4>Operating model inventory</h4>
+              <p>Built and maintained the <em>Ops Model Inventory</em>, cataloguing all models and their rollover times in one reference.</p>
+              <span class="impact">A single source of truth for all master models — the foundation for rollover and continuity planning.</span>
+            </div>
+          </li>
+        </ul></div>
+      </div>
+    </article>
+
+    <!-- ================= Milestone 6 ================= -->
+    <article class="milestone m6">
+      <button class="milestone-header" aria-expanded="false" aria-controls="m6-body">
+        <div class="diamond"><span>06</span></div>
+        <div class="milestone-title">
+          <h3>APA System Upgrade</h3>
+          <div class="tagline">Preparing EMG for the APA platform transition — structured change management ahead of cut-over.</div>
+          <div class="chips"><span class="chip">Change management</span><span class="chip status">In progress</span></div>
+        </div>
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <div class="milestone-body" id="m6-body">
+        <div><ul class="detail-list">
+          <li class="detail">
+            <span class="detail-id">6.1</span>
+            <div>
               <h4>Change management plan &amp; process mapping</h4>
               <p>Developed the change management plan and mapped current-state processes against the upgraded APA system, identifying every touchpoint that the upgrade affects.</p>
               <span class="impact">The business knows exactly what changes, where, and who is impacted — before cut-over.</span>
             </div>
           </li>
           <li class="detail">
-            <span class="detail-id">5.2</span>
+            <span class="detail-id">6.2</span>
             <div>
               <h4>Connectivity testing completed</h4>
               <p>Completed connectivity testing against the upgraded APA environment, confirming EMG's integrations are ready for the transition.</p>
